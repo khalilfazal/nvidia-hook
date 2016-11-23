@@ -1,0 +1,14 @@
+# vim: set ft=sh:
+
+build () {
+  echo "Building nvidia modules for ${KERNELVERSION} kernel..."
+  $nvidia_version = $(ls /usr/src | sed -n 's/nvidia-\(.*\)/\1/p')
+  dkms install nvidia/$nvidia_version -k ${KERNELVERSION}/arch
+  echo "Ok."
+}
+
+help () {
+cat<<HELPEOF
+  This hook rebuilds nvidia modules. It does nothing to the initrd image.
+HELPEOF
+}
