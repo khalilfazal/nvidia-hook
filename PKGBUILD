@@ -10,7 +10,7 @@ license=('GPL3')
 depends=('nvidia-dkms')
 install='nvidia-hook.install'
 source=('https://raw.githubusercontent.com/khalilfazal/nvidia-hook/master/nvidia')
-sha256sums=('e8f3885be0b17f6973f43a06c6d315f3c69023b16c91884af40ef8f12738bc63')
+sha256sums=('066f906a785743167b1d772d3ee610125ce7aa0627bf7be8ce3e9574a965a867')
 
 package() {
   install -dm 755 "${pkgdir}"/usr/lib/initcpio/install
